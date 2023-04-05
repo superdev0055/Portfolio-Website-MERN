@@ -1,0 +1,86 @@
+.hero__section {
+  background-color: hsla(0, 0, 0, 0.5);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.hero__text__wrapper {
+  margin: auto;
+  max-width: $desktop-max-width;
+  @media screen and (max-width: $small-tablet-max-width) {
+    padding-left: 60px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    margin: 80px auto auto auto;
+    padding-left: 30px;
+  }
+}
+
+.hero__text {
+  position: relative;
+  color: $Hero-Text-Color;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 72px;
+  margin: auto;
+  max-width: 745px;
+  text-shadow: 0px 0px 20px $Hero-Text-Outline-Color;
+  @media screen and (max-width: $labtop-max-width) {
+    font-size: 60px;
+    max-width: 625px;
+  }
+  @media screen and (max-width: $small-tablet-max-width) {
+    font-size: 48px;
+    max-width: 575px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    font-size: 30px;
+    max-width: 360px;
+  }
+}
+
+.hero__text__name {
+  color: $Hero-Text-Special-Color;
+}
+
+.hero__text__title {
+  color: $Hero-Text-Special-Color;
+  text-decoration: underline;
+}
+
+.hero__text__word {
+  color: $Hero-Text-Color;
+}
+
+.hero__text__verb {
+  color: $Hero-Text-Special-Color;
+}
+
+.hero__text__verb-enter {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0.9;
+  &.hero__text__verb-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero__text__verb-exit {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: transform 1s, opacity 0.5s;
+  transform: translateY(0);
+  opacity: 0.25;
+  &.hero__text__verb-exit-active {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.hero__cta__buttons {
+  margin-top: 24px;
+}

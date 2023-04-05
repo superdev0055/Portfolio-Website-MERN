@@ -1,0 +1,167 @@
+.about__wrapper {
+  background-color: $HP-BK-Light-Color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__profileImg {
+  border: 10px solid $A-Banner-Bk-Color;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px #102a43;
+  position: absolute;
+  left: 0;
+  @media screen and (max-width: $phone-max-width) {
+    position: relative;
+    left: auto;
+  }
+}
+
+.about__content__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  border-radius: 5px;
+  margin-top: 100px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: 64px;
+    width: 300px;
+    flex-direction: column;
+  }
+}
+
+.about__content__bottom {
+  margin: 64px 0 64px 0;
+  width: 700px;
+  height: auto;
+  line-height: 1.5;
+  @media screen and (max-width: $small-tablet-max-width) {
+    width: 500px;
+  }
+  @media screen and (max-width: $phone-max-width) {
+    width: 300px;
+    line-height: 1.3;
+  }
+}
+
+.about__bio {
+  padding: 10px;
+  color: $A-Text-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  white-space: pre-line;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0px;
+  }
+}
+
+.about__banner {
+  display: flex;
+  justify-content: flex-end;
+  color: $A-Text-Color;
+  background-color: $A-Banner-Bk-Color;
+  border-radius: 5px;
+  width: 550px;
+  height: 80px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: -90px;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    background-color: $HP-BK-Light-Color;
+  }
+}
+
+.banner__first {
+  padding-right: 60px;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0;
+    width: 100px;
+    border-radius: 5px;
+    background-color: $A-Banner-Bk-Color;
+  }
+}
+
+.banner__second {
+  padding-right: 20px;
+  @media screen and (max-width: $phone-max-width) {
+    padding: 0;
+  }
+}
+
+.banner__title {
+  margin: 0px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  color: $A-Link-Title-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    margin-top: -50px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 18px;
+  }
+}
+
+.banner__second .banner__title {
+  @media screen and (max-width: $phone-max-width) {
+    color: $A-Email-Title-Mobile-Color;
+  }
+}
+
+.banner__email {
+  margin: 4px 0;
+  color: $A-Email-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  @media screen and (max-width: $phone-max-width) {
+    color: $A-Email-Mobile-Color;
+  }
+}
+
+.banner__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: $phone-max-width) {
+    flex-direction: column;
+    height: 164px;
+    margin-bottom: 32px;
+  }
+}
+
+.banner__icon__svg {
+  @media screen and (max-width: $phone-max-width) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.banner__link {
+  fill: $A-Icon-Color;
+  transition: fill 0.5s ease-in;
+  &:hover {
+    fill: $A-Email-Color;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $Logo-Color;
+  }
+}
+
+.about__loading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  color: $PD-Details-Title-Color;
+}

@@ -1,0 +1,43 @@
+.dashboard__nav {
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dashboard__nav__buttons__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dashboard__nav__buttons__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.dashboard__nav__button {
+  cursor: pointer;
+  margin-right: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid $Dash-Card-Bk;
+  background-color: rgba(0, 0, 0, 0);
+  color: $Dash-Input;
+  font-size: 16px;
+  transition: background-color 0.25s linear, color 0.25s linear;
+  &:hover {
+    background-color: $Dash-Card-Bk;
+    color: $Dash-Text;
+  }
+}
+
+.nav__button--right {
+  margin-right: 0;
+}
+
+.dashboard__content {
+  padding: 0px 50px;
+  background-color: $Dash-Card-Bk;
+}

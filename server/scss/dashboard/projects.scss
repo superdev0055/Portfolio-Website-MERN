@@ -1,0 +1,138 @@
+.project__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 48px 0 16px 0;
+}
+
+// Nav buttons
+// Left side
+.button_to_extend_from {
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+}
+
+.projects__button {
+  @extend .button_to_extend_from;
+  color: $Dash-Text;
+  border: 2px solid #0f609b;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.projects__button--active {
+  @extend .button_to_extend_from;
+  color: $Dash_Input;
+  background-color: #0f609b;
+}
+
+// Right side
+.add__button {
+  @extend .button_to_extend_from;
+  border: 2px solid #0f609b;
+  color: #0f609b;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.delete__button {
+  @extend .button_to_extend_from;
+  background-color: #ba2525;
+  color: $Dash_Input;
+}
+
+.update__button {
+  @extend .button_to_extend_from;
+  margin-right: 0px;
+  background-color: #0f609b;
+  color: $Dash_Input;
+}
+
+// Project sections
+.project__edit-card {
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 128px;
+}
+
+.project__images {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+
+.project__images__wrapper {
+  margin: 16px 0 24px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image__upload {
+  display: grid;
+  grid-template-rows: 240px 1fr;
+  border-radius: 5px;
+  min-height: 276px;
+  max-width: 260px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(5, 13, 21, 0.3);
+}
+
+.image__form__label {
+  height: 36px;
+  width: 240px;
+}
+
+.image__placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image__placeholder__text {
+  color: #102a43;
+  font-weight: 300;
+  opacity: 0.75;
+}
+
+.image__thumbnail {
+  max-width: 240px;
+}
+
+.image__input__wrapper {
+  position: relative;
+}
+
+.image__fake__button {
+  border: 2px solid #102a43;
+  color: #102a43;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
+  border-radius: 5px;
+  width: 240px;
+  height: 36px;
+  transition: color 0.25s ease-in, background-color 0.25s ease-in;
+}
+
+.image__form__input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  width: 240px;
+  height: 36px;
+  opacity: 0;
+}
+
+.project__main {
+  grid-row: 2 / -1;
+  grid-column: 1 / 2;
+}
+
+.project__tech {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+}

@@ -1,0 +1,86 @@
+.skills__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $HP-BK-Light-Color;
+}
+
+.skills__content {
+  margin: auto;
+  width: 100%;
+  max-width: $desktop-max-width;
+}
+
+.skills {
+  display: flex;
+  padding: 96px 0 64px 0;
+  justify-content: space-evenly;
+  @media screen and (max-width: $phone-max-width) {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+// For edge
+@supports (-ms-ime-align: auto) {
+  .skills {
+    justify-content: space-around;
+  }
+}
+
+.skill__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: $phone-max-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.skill__title {
+  color: $S-List-Title-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 24px auto;
+  @media screen and (max-width: $phone-max-width) {
+    margin: 12px auto;
+  }
+}
+
+.skill__svg {
+  height: 50px;
+}
+
+.skill__path {
+  stroke-width: 10;
+  stroke: $S-List-Accent-Color;
+  opacity: 1;
+}
+
+.skill__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 24px auto;
+  text-align: center;
+  @media screen and (max-width: $phone-max-width) {
+    margin: 12px auto;
+  }
+}
+
+.skill__listitem {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $S-List-Text-Color;
+}
+
+.skills__loading {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin: 50px auto;
+  color: $PD-Details-Title-Color;
+}

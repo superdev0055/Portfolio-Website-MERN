@@ -1,0 +1,254 @@
+@import '../colors';
+@import '../sizes';
+// Import other sheets
+@import 'imageSlider.scss';
+@import 'imageModal.scss';
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $HP-BK-Mid-Color;
+}
+
+#__next {
+  width: 100%;
+}
+
+.project-page__wrapper {
+  width: 100%;
+  max-width: $desktop-max-width;
+  display: grid;
+  grid-template-columns: 975px auto;
+  grid-template-rows: 1fr;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 3px 15px 10px 0px $Button-Shadow-Color-Far, 3px 5px 10px 0 $Button-Shadow-Color-Close;
+  @media screen and (max-width: 1260px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+}
+
+.project-page__details {
+  grid-column: 2 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: $PD-Details-BK-Color;
+  z-index: 10;
+  border-left: 5px solid $PD-Border-Color;
+  overflow-x: hidden;
+  @media screen and (max-width: 1260px) {
+    border-left: 0px solid $PD-Border-Color;
+    border-bottom: 5px solid $PD-Border-Color;
+    order: 0;
+  }
+}
+
+.details__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+  color: $PD-Details-Title-Color;
+  margin: 24px auto 0px auto;
+  @media screen and (max-width: 1390px) {
+    font-size: 48px;
+  }
+}
+
+// React animations
+.title-appear {
+  opacity: 0;
+}
+
+.title-appear.title-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+// End of react animations
+//
+.details__type {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $PD-Details-Type-Color;
+  margin: 8px auto 36px auto;
+  @media screen and (max-width: 1260px) {
+    font-size: 16px;
+    margin: 4px auto 24px auto;
+  }
+}
+
+// React animations
+.type-appear {
+  opacity: 0;
+}
+
+.type-appear.type-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1s ease-in;
+}
+
+// End of react animations
+//
+.details__description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $PD-Details-Text-Color;
+  text-align: center;
+  margin: 0;
+  max-width: 28em;
+  line-height: 1.5;
+}
+
+// React animations
+.description-appear {
+  opacity: 0;
+}
+
+.description-appear.description-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1s ease-in;
+}
+
+// End of react animations
+//
+.details__tech {
+  margin: 8px auto 32px auto;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1260px) {
+    margin: 24px auto 24px auto;
+  }
+}
+
+// React animations
+.tech-appear {
+  opacity: 0;
+}
+
+.tech-appear.tech-appear-active {
+  opacity: 1;
+  transition: opacity 1s 1.5s ease-in;
+}
+
+// End of react animations
+//
+.tech__icon {
+  margin: 36px auto 24px auto;
+  width: 30px;
+  height: 30px;
+  @media screen and (max-width: 1260px) {
+    margin: 0px auto 14px auto;
+  }
+}
+
+.icon__primary {
+  fill: $PD-Icon-Primary-Color;
+}
+
+.icon__secondary {
+  fill: $PD-Icon-Secondary-Color;
+}
+
+.tech__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: $PD-Details-Title-Color;
+  text-align: center;
+  margin: 0px auto 24px auto;
+  @media screen and (max-width: 1260px) {
+    margin: 0px auto 14px auto;
+  }
+}
+
+.tech__list {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  line-height: 1.5;
+  margin: 0px auto 0px auto;
+}
+
+.tech__list__item {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $PD-Tech-Text-Color;
+  @media screen and (max-width: 1260px) {
+    font-size: 16px;
+  }
+}
+
+.details__links {
+  display: flex;
+}
+
+.details__link {
+  color: $Pri-Button-Text-Color;
+  background-color: $Pri-Button-BK-Color;
+  border: 1px solid $Pri-Button-Border;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  box-shadow: 0px 1px 2px rgba(16, 42, 67, 0.5), 0px 4px 3px 0px rgba(16, 42, 67, 0.3);
+  margin: 0px 10px 24px 10px;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  &:hover {
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px rgba(16, 42, 67, 0.5), 0px 8px 5px 1px rgba(16, 42, 67, 0.3);
+  }
+  &:focus {
+    outline: none;
+    border-color: $Nav-Color-Highlight;
+    transform: translate(0, -3px);
+    box-shadow: 1px 5px 3px rgba(16, 42, 67, 0.5), 0px 8px 5px 1px rgba(16, 42, 67, 0.3);
+  }
+}
+
+.details__codelink {
+  @extend .details__link;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $PD-Details-Title-Color;
+  color: $PD-Details-Title-Color;
+}
+
+// React animations
+.link-appear {
+  transform: translate(1000px);
+}
+
+.link-appear.link-appear-active {
+  transform: translate(0px);
+  transition: transform 1s 3s cubic-bezier(0.18, 0.63, 0, 0.99);
+}
+
+// End of react animations
+//
+.project-page__message {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: $PD-Details-Title-Color;
+}

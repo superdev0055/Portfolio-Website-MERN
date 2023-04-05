@@ -1,0 +1,22 @@
+.footer__wrapper {
+  padding: 24px 0;
+  background-color: $HP-BK-Darkest-Color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $F-Text-Color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.footer__link {
+  padding: 0 3px;
+  color: $F-Text-Color;
+  text-decoration: none;
+  cursor: not-allowed;
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $Logo-Color;
+  }
+}

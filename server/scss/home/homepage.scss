@@ -1,0 +1,32 @@
+@import 'scss/_colors.scss';
+@import 'scss/_sizes.scss';
+// Import other sheets
+@import 'slice.scss';
+@import 'icons.scss';
+@import 'logo.scss';
+@import 'title.scss';
+@import 'navbar.scss';
+@import 'hero.scss';
+@import 'herobuttons.scss';
+@import 'skills.scss';
+@import 'work.scss';
+@import 'about.scss';
+@import 'contact.scss';
+@import 'footer.scss';
+// Home page styles
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: $HP-BK-Mid-Color;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.landing__wrapper {
+  background-image: url('/static/website_hero.jpg');
+  background-size: cover;
+  height: 100vh;
+}
